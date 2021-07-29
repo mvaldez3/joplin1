@@ -1,0 +1,11 @@
+stim_id,sums_feat,category,correct_key
+'1111111100',8,batmans,f
+'1111110011',8,batmans,f
+'1111001111',8,batmans,f
+'1100111111',8,batmans,f
+'0011111111',8,batmans,f
+'0000000011',2,robins,j
+'0000001100',2,robins,j
+'0000110000',2,robins,j
+'0011000000',2,robins,j
+'1100000000',2,robins,j

@@ -1,6 +1,6 @@
-﻿/**************** 
- * Joplin1 Test *
- ****************/
+﻿/*********************** 
+ * Joplin1_Online Test *
+ ***********************/
 
 import { PsychoJS } from './lib/core-2021.1.4.js';
 import * as core from './lib/core-2021.1.4.js';
@@ -27,7 +27,7 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'joplin1';  // from the Builder filename that created this script
+let expName = 'joplin1_online';  // from the Builder filename that created this script
 let expInfo = {'participant': '', 'session': '001'};
 
 // Start code blocks for 'Before Experiment'
@@ -100,10 +100,6 @@ function updateInfo() {
 function experimentInit() {
   // Initialize components for Routine "Welcome_Initializing_Screen"
   Welcome_Initializing_ScreenClock = new util.Clock();
-  import * as sf from 'stim_file_script';
-  var random_proto;
-  random_proto = sf.randpro_select("/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/Prototype.csv", null);
-  
   welcome_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'welcome_text',
@@ -112,16 +108,17 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
     color: new util.Color('black'),  opacity: undefined,
-    depth: -1.0 
+    depth: 0.0 
   });
   
   welcome_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  import * as csv from 'csv';
+  import * as random from 'random';
+  
   // Initialize components for Routine "recodeTrain"
   recodeTrainClock = new util.Clock();
-  sf.stim_build("/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/dev_train.csv", random_proto);
-  os.rename("/Volumes/shares/Cabi/exp/joplin/joplin1/data/_stimfile.csv", (filename + "_stimfile_train.csv"));
-  
+  /* Syntax Error: Fix Python code */
   // Initialize components for Routine "stimTrain"
   stimTrainClock = new util.Clock();
   train_image = new visual.ImageStim({
@@ -846,9 +843,7 @@ function recodeTestRoutineBegin(snapshot) {
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    sf.stim_build("/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/test_stim1.csv", random_proto);
-    os.rename("/Volumes/shares/Cabi/exp/joplin/joplin1/data/_stimfile.csv", (filename + "_stimfile_test.csv"));
-    
+    /* Syntax Error: Fix Python code */
     // keep track of which components have finished
     recodeTestComponents = [];
     

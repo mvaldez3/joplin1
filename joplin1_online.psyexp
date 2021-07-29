@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.1.4">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="list"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save hdf5 file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="2021.1.4" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[2560, 1440]" valType="list"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[1,1,1]" valType="color"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="elAddress" updates="None" val="100.1.1.1" valType="str"/>
+    <Param name="elDataFiltering" updates="None" val="FILTER_LEVEL_2" valType="str"/>
+    <Param name="elLiveFiltering" updates="None" val="FILTER_LEVEL_OFF" valType="str"/>
+    <Param name="elModel" updates="None" val="EYELINK 1000 DESKTOP" valType="str"/>
+    <Param name="elPupilAlgorithm" updates="None" val="ELLIPSE_FIT" valType="str"/>
+    <Param name="elPupilMeasure" updates="None" val="PUPIL_AREA" valType="str"/>
+    <Param name="elSampleRate" updates="None" val="1000" valType="num"/>
+    <Param name="elSimMode" updates="None" val="False" valType="bool"/>
+    <Param name="elTrackEyes" updates="None" val="RIGHT_EYE" valType="str"/>
+    <Param name="elTrackingMode" updates="None" val="PUPIL_CR_TRACKING" valType="str"/>
+    <Param name="expName" updates="None" val="joplin1_online" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="eyetracker" updates="None" val="None" valType="str"/>
+    <Param name="gpAddress" updates="None" val="127.0.0.1" valType="str"/>
+    <Param name="gpPort" updates="None" val="4242" valType="num"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+    <Param name="mgBlink" updates="None" val="('MIDDLE_BUTTON',)" valType="list"/>
+    <Param name="mgMove" updates="None" val="CONTINUOUS" valType="str"/>
+    <Param name="mgSaccade" updates="None" val="0.5" valType="num"/>
+    <Param name="tbLicenseFile" updates="None" val="" valType="str"/>
+    <Param name="tbModel" updates="None" val="" valType="str"/>
+    <Param name="tbSampleRate" updates="None" val="60" valType="num"/>
+    <Param name="tbSerialNo" updates="None" val="" valType="str"/>
+  </Settings>
+  <Routines>
+    <Routine name="feedback">
+      <CodeComponent name="feedback_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if ((! train_key.keys)) {&amp;#10;    feedback = &quot;Oops...you failed to respond within the alloted time&quot;;&amp;#10;} else {&amp;#10;    if (train_key.corr) {&amp;#10;        feedback = `Correct. It was ${category.upper()}`;&amp;#10;    } else {&amp;#10;        feedback = `Incorrect. It was ${category.upper()}`;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if not train_key.keys:&amp;#10;    feedback = &quot;Oops...you failed to respond within the alloted time&quot;&amp;#10;elif train_key.corr:&amp;#10;    feedback = f&quot;Correct. It was {category.upper()}&quot;&amp;#10;else:&amp;#10;    feedback = f&quot;Incorrect. It was {category.upper()}&quot;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="feedback_code" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="feedback_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="feedback_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$feedback" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="stimTest">
+      <CodeComponent name="code_test">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="stim_test = ((&quot;/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/&quot; + stim_id.replace(&quot;'&quot;, &quot;&quot;).toString()) + &quot;.jpg&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="stim_test = '/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/' + str(stim_id.replace('\'', '')) + '.jpg'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_test" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="test_image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$stim_test" valType="file"/>
+        <Param name="interpolate" updates="constant" val="nearest" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="test_image" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(-0.05, 0.1)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="[0.45,0.675]" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="4.0" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="test_key">
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="$correct_key" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="test_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="batmans_text_test">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="num"/>
+        <Param name="name" updates="None" val="batmans_text_test" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="[-0.35,-0.35]" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Batmans" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <TextComponent name="robins_text_test">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="num"/>
+        <Param name="name" updates="None" val="robins_text_test" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="[0.35,-0.35]" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Robins" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="stimTrain">
+      <CodeComponent name="code_train">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="train_stim = ((&quot;/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/&quot; + stim_id.replace(&quot;'&quot;, &quot;&quot;).toString()) + &quot;.jpg&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# rename the stim_id to match image names and file path&amp;#10;train_stim = '/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/' + str(stim_id.replace('\'', '')) + '.jpg'&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_train" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="train_image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$train_stim" valType="file"/>
+        <Param name="interpolate" updates="constant" val="nearest" valType="str"/>
+        <Param name="mask" updates="constant" val="" valType="str"/>
+        <Param name="name" updates="None" val="train_image" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(-0.05, 0.1)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="[0.45, 0.675]" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="4" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="num"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="train_key">
+        <Param name="allowedKeys" updates="set every repeat" val="'f','j'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="$correct_key" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="train_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3.0" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="batmans_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="num"/>
+        <Param name="name" updates="None" val="batmans_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="[-.35,-.35]" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="Batmans" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <TextComponent name="robins_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.08" valType="num"/>
+        <Param name="name" updates="None" val="robins_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="[0.35,-0.35]" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="Robins" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="ITItest"/>
+    <Routine name="fix1000">
+      <PolygonComponent name="ITIstim">
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="fillColor" updates="constant" val="black" valType="color"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="black" valType="color"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="num"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="ITIstim" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="cross" valType="str"/>
+        <Param name="size" updates="constant" val="(0.1, 0.1)" valType="list"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="vertices" updates="constant" val="" valType="list"/>
+      </PolygonComponent>
+    </Routine>
+    <Routine name="proto_select"/>
+    <Routine name="recodeTrain">
+      <CodeComponent name="recode_train_stim">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import csv&amp;#10;import random&amp;#10;&amp;#10;with open('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/Prototype.csv', encoding='utf-8-sig') as proto_file:&amp;#10;	proto_file = csv.reader(proto_file)&amp;#10;	&amp;#10;	# create a list of lists containing each for in the prototype file&amp;#10;	proto_list = []&amp;#10;	for row in proto_file:&amp;#10;		proto_list.append(row)&amp;#10;	# Add a random seed. Randomly choose a row from the prototype file and assign it as the random prototype&amp;#10;random.seed(None)&amp;#10;randpro = random.choice(proto_list)&amp;#10;&amp;#10;	# Turn the randomp prototype into a list of integers instead of strings to make comparisons&amp;#10;for item in range(0, len(randpro)):&amp;#10;	randpro[item] = int(randpro[item])&amp;#10;&amp;#10;&amp;#10;&amp;#10;	# Open training file and turn each row into a list of integers instead of strings. Count the number of stimulus (rows) there are in the file. &amp;#10;with open('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/dev_train.csv', encoding='utf-8-sig') as sf:&amp;#10;	sf = csv.reader(sf)&amp;#10;	rows = list(sf)&amp;#10;	count = (list(range(len(rows))))&amp;#10;&amp;#10;	# Make a new list that contains a list for each row in the stimlus file as integers instead of strings.&amp;#10;	stimulus_list = []&amp;#10;	for i in count:&amp;#10;		new_row = []&amp;#10;		for element in rows[i]:&amp;#10;			new_row.append(int(element))&amp;#10;		stimulus_list.append(new_row)&amp;#10;&amp;#10;	# create a list of all 1's to compare to the randomly selected prototype later&amp;#10;all1proto = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]&amp;#10;&amp;#10;	# Compare the randomly selected prototype to the all 1's. If it is the same, then take the stimulus file as is and add the necessary columns.&amp;#10;if randpro == all1proto:&amp;#10;	&amp;#10;	stim_id = []&amp;#10;	sums_feat = []&amp;#10;	category = []&amp;#10;	correct_key = []&amp;#10;	for item in stimulus_list:&amp;#10;		# calculate the sum of the number of features each stimulus has in common with the protoype&amp;#10;		sums = sum(item)&amp;#10;		sums_feat.append(sums)&amp;#10;&amp;#10;		# define the categories based on sum_feat &amp;#10;		if sums &gt; 5:&amp;#10;			cat = 'batmans'&amp;#10;		else:&amp;#10;			cat = 'robins'&amp;#10;&amp;#10;	# define which key is correct based on the category it is assigned&amp;#10;		if cat == 'batmans':&amp;#10;			key_corr = 'f'&amp;#10;		elif cat == 'robins':&amp;#10;			key_corr = 'j'&amp;#10;		correct_key += [key_corr]&amp;#10;&amp;#10;		# append cat to category. Have to use different operation because .append doesn't work for strings&amp;#10;		category += [cat]&amp;#10;&amp;#10;		# now that all the manipulations are done, we need to concatenate the recoded stimuli to match the file names. &amp;#10;		string = ''.join([str(item) for item in item])&amp;#10;		string = ''.join('\'' + string + '\'')&amp;#10;		stim_id += [string]&amp;#10;&amp;#10;	# If the randomly selected prototype is not all 1's then we need to recode the stimulus and add the necessary rows. &amp;#10;	else:&amp;#10;		# get the number of stimuli in the stim_file and create a list of the range of numbers.&amp;#10;		count_stim_list = list(range(len(stimulus_list)))&amp;#10;		&amp;#10;		# count the number of items in the prototype and create a list for the range of numbers. Should always be 10 for the 10 features.&amp;#10;	count_randpro = (list(range(len(randpro))))&amp;#10;	&amp;#10;		# create empty list for each column we want in our csv&amp;#10;	comparison = []&amp;#10;	stim_id = []&amp;#10;	sums_feat = []&amp;#10;	category = []&amp;#10;	correct_key = []&amp;#10;&amp;#10;		# make a new variable defining the stimulus we are currently working with as &quot;stim&quot;&amp;#10;	for i in count_stim_list:&amp;#10;		stim = stimulus_list[i]&amp;#10;&amp;#10;			# create another empty list to store the comparisons between the prototype and the current stimulus&amp;#10;		new_code = []&amp;#10;		for n in count_randpro:&amp;#10;			if stim[n] == randpro[n]:&amp;#10;				output = bool('True')&amp;#10;			else:&amp;#10;				output = bool('')&amp;#10;&amp;#10;				# turn the boolean phrases into into integers for the new code. Append each item to the rest of the items within the stimulus&amp;#10;			new_code.append(output * 1)&amp;#10;&amp;#10;			# Add the recoded stimuli into the same list. We only need this list to check that the recode worked. It won't be going in the csv&amp;#10;		comparison.append(new_code)&amp;#10;&amp;#10;			# compare the new code to the stimuli to get the number of features that match so we can add them up and determine the category&amp;#10;		compare_cat = []&amp;#10;		for x in count_randpro:&amp;#10;			if new_code[x] == randpro[x]:&amp;#10;				output = bool('True')&amp;#10;			else:&amp;#10;				output = bool('')&amp;#10;			compare_cat.append(output*1)&amp;#10;&amp;#10;			# find a sum of the number of features each stimulus has in common with the prototype&amp;#10;		sums = sum(compare_cat)&amp;#10;		sums_feat.append(sums)&amp;#10;		&amp;#10;			# define the categories based on the number of features each stimulus has in common with the prototype&amp;#10;		if sums &gt; 5:&amp;#10;			cat = 'batmans'&amp;#10;		else:&amp;#10;			cat = 'robins'&amp;#10;		category += [cat]&amp;#10;&amp;#10;			# define which key is correct based on the category it is assigned&amp;#10;		if cat == 'batmans':&amp;#10;			key_corr = 'f'&amp;#10;		elif cat == 'robins':&amp;#10;			key_corr = 'j'&amp;#10;		correct_key += [key_corr]&amp;#10;&amp;#10;			# now that all the manipulations are done, we can to concatenate the recoded stimuli to match the file names&amp;#10;		string = ''.join([str(item) for item in new_code])&amp;#10;			# added quotations so that the leading zeros are not removed when writing to the csv file. Will take them off in psychopy&amp;#10;		string = ''.join('\'' + string + '\'')&amp;#10;		stim_id += [string]&amp;#10;&amp;#10;	# write the results to a new csv file. &amp;#10;	with open('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_stimfile.csv', 'w', newline='') as stim_file:&amp;#10;		writer = csv.writer(stim_file)&amp;#10;		writer.writerow(('stim_id', 'sums_feat', 'category', 'correct_key'))&amp;#10;		for i in range(len(stim_id)):&amp;#10;			writer.writerow((stim_id[i], sums_feat[i], category[i], correct_key[i]))&amp;#10;&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_stimfile.csv', filename + '_stimfile_train.csv')" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="recode_train_stim" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="recodeTest">
+      <CodeComponent name="recode_test_stim">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="import csv&amp;#10;import random&amp;#10;&amp;#10;with open('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/Prototype.csv', encoding='utf-8-sig') as proto_file:&amp;#10;	proto_file = csv.reader(proto_file)&amp;#10;	&amp;#10;	# create a list of lists containing each for in the prototype file&amp;#10;	proto_list = []&amp;#10;	for row in proto_file:&amp;#10;		proto_list.append(row)&amp;#10;	# Add a random seed. Randomly choose a row from the prototype file and assign it as the random prototype&amp;#10;random.seed(None)&amp;#10;randpro = random.choice(proto_list)&amp;#10;&amp;#10;	# Turn the randomp prototype into a list of integers instead of strings to make comparisons&amp;#10;for item in range(0, len(randpro)):&amp;#10;	randpro[item] = int(randpro[item])&amp;#10;&amp;#10;&amp;#10;&amp;#10;	# Open training file and turn each row into a list of integers instead of strings. Count the number of stimulus (rows) there are in the file. &amp;#10;with open('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/dev_train.csv', encoding='utf-8-sig') as sf:&amp;#10;	sf = csv.reader(sf)&amp;#10;	rows = list(sf)&amp;#10;	count = (list(range(len(rows))))&amp;#10;&amp;#10;	# Make a new list that contains a list for each row in the stimlus file as integers instead of strings.&amp;#10;	stimulus_list = []&amp;#10;	for i in count:&amp;#10;		new_row = []&amp;#10;		for element in rows[i]:&amp;#10;			new_row.append(int(element))&amp;#10;		stimulus_list.append(new_row)&amp;#10;&amp;#10;	# create a list of all 1's to compare to the randomly selected prototype later&amp;#10;all1proto = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]&amp;#10;&amp;#10;	# Compare the randomly selected prototype to the all 1's. If it is the same, then take the stimulus file as is and add the necessary columns.&amp;#10;if randpro == all1proto:&amp;#10;	&amp;#10;	stim_id = []&amp;#10;	sums_feat = []&amp;#10;	category = []&amp;#10;	correct_key = []&amp;#10;	for item in stimulus_list:&amp;#10;		# calculate the sum of the number of features each stimulus has in common with the protoype&amp;#10;		sums = sum(item)&amp;#10;		sums_feat.append(sums)&amp;#10;&amp;#10;		# define the categories based on sum_feat &amp;#10;		if sums &gt; 5:&amp;#10;			cat = 'batmans'&amp;#10;		else:&amp;#10;			cat = 'robins'&amp;#10;&amp;#10;	# define which key is correct based on the category it is assigned&amp;#10;		if cat == 'batmans':&amp;#10;			key_corr = 'f'&amp;#10;		elif cat == 'robins':&amp;#10;			key_corr = 'j'&amp;#10;		correct_key += [key_corr]&amp;#10;&amp;#10;		# append cat to category. Have to use different operation because .append doesn't work for strings&amp;#10;		category += [cat]&amp;#10;&amp;#10;		# now that all the manipulations are done, we need to concatenate the recoded stimuli to match the file names. &amp;#10;		string = ''.join([str(item) for item in item])&amp;#10;		string = ''.join('\'' + string + '\'')&amp;#10;		stim_id += [string]&amp;#10;&amp;#10;	# If the randomly selected prototype is not all 1's then we need to recode the stimulus and add the necessary rows. &amp;#10;	else:&amp;#10;		# get the number of stimuli in the stim_file and create a list of the range of numbers.&amp;#10;		count_stim_list = list(range(len(stimulus_list)))&amp;#10;		&amp;#10;		# count the number of items in the prototype and create a list for the range of numbers. Should always be 10 for the 10 features.&amp;#10;	count_randpro = (list(range(len(randpro))))&amp;#10;	&amp;#10;		# create empty list for each column we want in our csv&amp;#10;	comparison = []&amp;#10;	stim_id = []&amp;#10;	sums_feat = []&amp;#10;	category = []&amp;#10;	correct_key = []&amp;#10;&amp;#10;		# make a new variable defining the stimulus we are currently working with as &quot;stim&quot;&amp;#10;	for i in count_stim_list:&amp;#10;		stim = stimulus_list[i]&amp;#10;&amp;#10;			# create another empty list to store the comparisons between the prototype and the current stimulus&amp;#10;		new_code = []&amp;#10;		for n in count_randpro:&amp;#10;			if stim[n] == randpro[n]:&amp;#10;				output = bool('True')&amp;#10;			else:&amp;#10;				output = bool('')&amp;#10;&amp;#10;				# turn the boolean phrases into into integers for the new code. Append each item to the rest of the items within the stimulus&amp;#10;			new_code.append(output * 1)&amp;#10;&amp;#10;			# Add the recoded stimuli into the same list. We only need this list to check that the recode worked. It won't be going in the csv&amp;#10;		comparison.append(new_code)&amp;#10;&amp;#10;			# compare the new code to the stimuli to get the number of features that match so we can add them up and determine the category&amp;#10;		compare_cat = []&amp;#10;		for x in count_randpro:&amp;#10;			if new_code[x] == randpro[x]:&amp;#10;				output = bool('True')&amp;#10;			else:&amp;#10;				output = bool('')&amp;#10;			compare_cat.append(output*1)&amp;#10;&amp;#10;			# find a sum of the number of features each stimulus has in common with the prototype&amp;#10;		sums = sum(compare_cat)&amp;#10;		sums_feat.append(sums)&amp;#10;		&amp;#10;			# define the categories based on the number of features each stimulus has in common with the prototype&amp;#10;		if sums &gt; 5:&amp;#10;			cat = 'batmans'&amp;#10;		else:&amp;#10;			cat = 'robins'&amp;#10;		category += [cat]&amp;#10;&amp;#10;			# define which key is correct based on the category it is assigned&amp;#10;		if cat == 'batmans':&amp;#10;			key_corr = 'f'&amp;#10;		elif cat == 'robins':&amp;#10;			key_corr = 'j'&amp;#10;		correct_key += [key_corr]&amp;#10;&amp;#10;			# now that all the manipulations are done, we can to concatenate the recoded stimuli to match the file names&amp;#10;		string = ''.join([str(item) for item in new_code])&amp;#10;			# added quotations so that the leading zeros are not removed when writing to the csv file. Will take them off in psychopy&amp;#10;		string = ''.join('\'' + string + '\'')&amp;#10;		stim_id += [string]&amp;#10;&amp;#10;	# write the results to a new csv file. &amp;#10;	with open('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_stimfile.csv', 'w', newline='') as stim_file:&amp;#10;		writer = csv.writer(stim_file)&amp;#10;		writer.writerow(('stim_id', 'sums_feat', 'category', 'correct_key'))&amp;#10;		for i in range(len(stim_id)):&amp;#10;			writer.writerow((stim_id[i], sums_feat[i], category[i], correct_key[i]))&amp;#10;&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_stimfile.csv', filename + '_stimfile_test.csv')" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="recode_test_stim" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="Welcome_Initializing_Screen">
+      <TextComponent name="welcome_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="welcome_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Insert welcome text.&amp;#10;&amp;#10;Press SPACE to proceed" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="welcome_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="welcome_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import csv &amp;#10;import random" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as csv from 'csv';&amp;#10;import * as random from 'random';&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="debrief_thankyou">
+      <TextComponent name="end_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="num"/>
+        <Param name="name" updates="None" val="end_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Add defbrief/thank you&amp;#10;&amp;#10;Press Space to continue" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+      <KeyboardComponent name="end_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="list"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="num"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="end_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="num"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="num"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="num"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="end_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="# get rid of unecessary conditions file&amp;#10;os.remove(filename + '_stimfile_train.csv')&amp;#10;os.remove(filename + '_stimfile_test.csv')" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="os.remove((filename + &quot;_stimfile_train.csv&quot;));&amp;#10;os.remove((filename + &quot;_stimfile_test.csv&quot;));&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="end_code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="Welcome_Initializing_Screen"/>
+    <Routine name="recodeTrain"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_train">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$filename + '_stimfile_train.csv'" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_train" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="stimTrain"/>
+    <Routine name="feedback"/>
+    <Routine name="fix1000"/>
+    <LoopTerminator name="trials_train"/>
+    <Routine name="recodeTest"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_test">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$filename + '_stimfile_test.csv'" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials_test" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="stimTest"/>
+    <Routine name="fix1000"/>
+    <LoopTerminator name="trials_test"/>
+    <Routine name="debrief_thankyou"/>
+  </Flow>
+</PsychoPy2experiment>

@@ -1,0 +1,192 @@
+library(dplyr)
+library(readr)
+
+# create the file path so I can enter in which participants and sessions I want to analyze
+participant <- '0'
+session <- '001'
+
+csv_path <- '/Volumes/shares/Cabi/exp/joplin/joplin1/data/'
+csv_file_end <- '_joplin1/.csv'
+
+data <- paste(csv_path, participant, '_', session, csv_file_end, sep ='')
+
+
+
+results_file <- '/Volumes/shares/Cabi/exp/joplin/joplin1/analysis_scripts/accuracy_results.csv'
+
+data <- read_csv('/Volumes/shares/Cabi/exp/joplin/joplin1/data/0_001_joplin1_2021_Aug_25_1444.csv')
+
+for (n in list_csv_files){
+  data <- read_csv(n)
+  participant <- data$participant[1]
+  if (participant %in% results_file$participant == TRUE){
+    row_location <- which(results_file$participant == participant)
+  }
+}
+
+
+session <- data$session[1]
+if(session == '001'){
+  session_name <- 's1'
+}
+if(session == '002'){
+  session_name <- 's2'
+}
+
+runs = c('1', '2', '3', '4', '5', '6', '7', '8')
+list_of_var <- list()
+
+### Overall Accuracy By Block - returned as 'session_overall_blkN' where S is the session and N is the run
+var_name = '_overall_blk'
+
+for (val in runs) {
+  name <- paste(session_name, var_name, val, sep = '')
+  block <- (strtoi(val)) -1
+  accuracy <- sum(na.omit(data$train_key.corr[which(data$train_runs.thisN == block)]))/
+    length(na.omit(data$train_key.corr[which(data$train_runs.thisN == block)]))
+  assign(name, accuracy)
+  list_of_var <- append(list_of_var, name)
+}
+
+
+### D2 Train Accuracy By Block - returned as 'session_d2_blkN' where N is the run
+var_name = '_d2_blk'
+for (val in runs) {
+  name <- paste(session_name, var_name, val, sep = '')
+  block <- (strtoi(val)) -1
+  accuracy <- sum(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 2 | data$train_runs.thisN == block & data$sums_feat == 8)]))/
+    length(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 2 | data$train_runs.thisN == block & data$sums_feat == 8)]))
+  assign(name, accuracy)
+  list_of_var <- append(list_of_var, name)
+}
+
+
+### D4 Accuracy By Block - returned as 'session_d4_blkN' where N is the run
+var_name = '_d4_blk'
+for (val in runs) {
+  name <- paste(session_name, var_name, val, sep = '')
+  block <- (strtoi(val)) -1
+  accuracy <- sum(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 4 | data$train_runs.thisN == block & data$sums_feat == 6)]))/
+    length(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 4 | data$train_runs.thisN == block & data$sums_feat == 6)]))
+  assign(name, accuracy)
+  list_of_var <- append(list_of_var, name)
+}
+
+### Overall Generalization Accuracy - returned as 'session_overall_gen'
+var_name = '_overall_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 | data$test_runs.thisN == 1)]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 | data$test_runs.thisN == 1)]))
+
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+### D2 Old Generalization Accuracy - returned as 'session_d2_old_gen'
+
+var_name = '_d2_old_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$item_type == 'old' | 
+                                       data$test_runs.thisN == 0 & data$sums_feat == 8 & data$item_type == 'old' | 
+                                       data$test_runs.thisN == 1 & data$sums_feat == 2 & data$item_type == 'old' | 
+                                       data$test_runs.thisN == 1 & data$sums_feat == 8 & data$item_type == 'old')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$item_type == 'old' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 8 & data$item_type == 'old' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 2 & data$item_type == 'old' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 8 & data$item_type == 'old')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+### D4 Old Generalization Accuracy - returned as 'session_d4_old_gen'
+var_name = '_d4_old_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$item_type == 'old' | 
+                                                     data$test_runs.thisN == 0 & data$sums_feat == 6 & data$item_type == 'old' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 4 & data$item_type == 'old' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 6 & data$item_type == 'old')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$item_type == 'old' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 6 & data$item_type == 'old' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 4 & data$item_type == 'old' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 6 & data$item_type == 'old')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+### D0 New Generalization Accuracy - returned as 'session_d0_new_gen'
+var_name = '_d0_new_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 0 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 0 & data$sums_feat == 10 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 0 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 10 & data$item_type == 'new')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 0 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 10 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 0 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 10 & data$item_type == 'new')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+### D1 New Generalization Accuracy - returned as 'session_d1_new_gen'
+var_name = '_d1_new_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 1 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 0 & data$sums_feat == 9 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 1 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 9 & data$item_type == 'new')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 1 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 9 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 1 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 9 & data$item_type == 'new')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+       
+### D2 New Generalization Accuracy - returned as 'session_d2_new_gen'
+var_name = '_d2_new_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 0 & data$sums_feat == 8 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 2 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 8 & data$item_type == 'new')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 8 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 2 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 8 & data$item_type == 'new')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+### D3 New Generalization Accuracy - returned as 'session_d3_new_gen'
+var_name = '_d3_new_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 3 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 0 & data$sums_feat == 7 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 3 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 7 & data$item_type == 'new')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 3 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 7 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 3 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 7 & data$item_type == 'new')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+### D4 New Generalization Accuracy - returned as 'session_d4_new_gen'
+var_name = '_d4_new_gen'
+name <- name <- paste(session_name, var_name, sep = '')
+accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 0 & data$sums_feat == 6 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 4 & data$item_type == 'new' | 
+                                                     data$test_runs.thisN == 1 & data$sums_feat == 6 & data$item_type == 'new')]))/
+  length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 0 & data$sums_feat == 6 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 4 & data$item_type == 'new' | 
+                                            data$test_runs.thisN == 1 & data$sums_feat == 6 & data$item_type == 'new')]))
+assign(name, accuracy)
+list_of_var <- append(list_of_var, name)
+
+# write the results to a data frame and append to the end of the csv file 
+results <- data.frame(participant = participant, list_of_var = list_of_var)
+                   
+write.table(results, 
+          file = results_file,
+          sep = ',',
+         append = TRUE,
+         col.names = FALSE,
+         quote = FALSE,
+         row.names = FALSE)

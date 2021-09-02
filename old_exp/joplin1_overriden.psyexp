@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2021.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2021.1.4">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -16,7 +16,6 @@
     <Param name="Resources" updates="None" val="[]" valType="list"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
-    <Param name="Save hdf5 file" updates="None" val="False" valType="bool"/>
     <Param name="Save log file" updates="None" val="True" valType="bool"/>
     <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
     <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
@@ -29,29 +28,9 @@
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="white" valType="color"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
-    <Param name="elAddress" updates="None" val="100.1.1.1" valType="str"/>
-    <Param name="elDataFiltering" updates="None" val="FILTER_LEVEL_2" valType="str"/>
-    <Param name="elLiveFiltering" updates="None" val="FILTER_LEVEL_OFF" valType="str"/>
-    <Param name="elModel" updates="None" val="EYELINK 1000 DESKTOP" valType="str"/>
-    <Param name="elPupilAlgorithm" updates="None" val="ELLIPSE_FIT" valType="str"/>
-    <Param name="elPupilMeasure" updates="None" val="PUPIL_AREA" valType="str"/>
-    <Param name="elSampleRate" updates="None" val="1000" valType="num"/>
-    <Param name="elSimMode" updates="None" val="False" valType="bool"/>
-    <Param name="elTrackEyes" updates="None" val="RIGHT_EYE" valType="str"/>
-    <Param name="elTrackingMode" updates="None" val="PUPIL_CR_TRACKING" valType="str"/>
     <Param name="expName" updates="None" val="joplin1" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
-    <Param name="eyetracker" updates="None" val="None" valType="str"/>
-    <Param name="gpAddress" updates="None" val="127.0.0.1" valType="str"/>
-    <Param name="gpPort" updates="None" val="4242" valType="num"/>
     <Param name="logging level" updates="None" val="debug" valType="code"/>
-    <Param name="mgBlink" updates="None" val="('MIDDLE_BUTTON',)" valType="list"/>
-    <Param name="mgMove" updates="None" val="CONTINUOUS" valType="str"/>
-    <Param name="mgSaccade" updates="None" val="0.5" valType="num"/>
-    <Param name="tbLicenseFile" updates="None" val="" valType="str"/>
-    <Param name="tbModel" updates="None" val="" valType="str"/>
-    <Param name="tbSampleRate" updates="None" val="60" valType="num"/>
-    <Param name="tbSerialNo" updates="None" val="" valType="str"/>
   </Settings>
   <Routines>
     <Routine name="stimTrain">
@@ -236,15 +215,14 @@
         <Param name="stopVal" updates="constant" val="1.0" valType="num"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="vertices" updates="constant" val="" valType="list"/>
       </PolygonComponent>
     </Routine>
     <Routine name="welcome_initializing">
       <CodeComponent name="paths_and_seeds">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="#import important packages&amp;#10;import random&amp;#10;&amp;#10;#set random seed for experiment&amp;#10;random_seed = int(expInfo['participant'])&amp;#10;random.seed(random_seed)&amp;#10;&amp;#10;#create list of random numbers to randomize run order for each participant&amp;#10;train_run_order = random.sample(range(1,100), 8)&amp;#10;print(train_run_order)&amp;#10;test_run_order = random.sample(range(1,100), 2)&amp;#10;print(test_run_order)&amp;#10;&amp;#10;#define stimulus sets and categories&amp;#10;stim_set1 = '/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/'&amp;#10;stim_set2 = '/Volumes/shares/Cabi/stimuli/cartoon_animals/Set2/'&amp;#10;category1 = {'categorya': 'Batmans', 'categoryb': 'Robins'}&amp;#10;category2 = {'categorya': 'Wallaces', 'categoryb': 'Gromets'}&amp;#10;if expInfo['session'] == '001':&amp;#10;    if (int(expInfo['participant'])%4) == 0:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category1&amp;#10;    if (int(expInfo['participant'])%4) == 1:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category1&amp;#10;    if (int(expInfo['participant'])%4) == 2:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category2&amp;#10;    if (int(expInfo['participant'])%4) == 3:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category2&amp;#10;&amp;#10;if expInfo['session'] == '002':&amp;#10;    if (int(expInfo['participant']) %4) == 0:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category2&amp;#10;    if (int(expInfo['participant'])%4) == 1:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category2&amp;#10;    if (int(expInfo['participant'])%4) == 2:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category1&amp;#10;    if (int(expInfo['participant'])%4) == 3:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category1&amp;#10;&amp;#10;# define the image size depending on where the image is coming from&amp;#10;if stimulus_set == stim_set2:&amp;#10;    img_size = [0.55, 0.55]&amp;#10;if stimulus_set == stim_set1:&amp;#10;    img_size = [0.4,0.6]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as random from 'random';&amp;#10;var category1, category2, img_size, random_seed, session_cat, stim_set1, stim_set2, stimulus_set, test_run_order, train_run_order;&amp;#10;random_seed = Number.parseInt(expInfo[&quot;participant&quot;]);&amp;#10;random.seed(random_seed);&amp;#10;train_run_order = random.sample(util.range(1, 100), 8);&amp;#10;console.log(train_run_order);&amp;#10;test_run_order = random.sample(util.range(1, 100), 2);&amp;#10;console.log(test_run_order);&amp;#10;stim_set1 = &quot;/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/&quot;;&amp;#10;stim_set2 = &quot;/Volumes/shares/Cabi/stimuli/cartoon_animals/Set2/&quot;;&amp;#10;category1 = {&quot;categorya&quot;: &quot;Batmans&quot;, &quot;categoryb&quot;: &quot;Robins&quot;};&amp;#10;category2 = {&quot;categorya&quot;: &quot;Wallaces&quot;, &quot;categoryb&quot;: &quot;Gromets&quot;};&amp;#10;if ((expInfo[&quot;session&quot;] === &quot;001&quot;)) {&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 0)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 1)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 2)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 3)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;}&amp;#10;if ((expInfo[&quot;session&quot;] === &quot;002&quot;)) {&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 0)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 1)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 2)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 3)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;}&amp;#10;if ((stimulus_set === stim_set2)) {&amp;#10;    img_size = [0.55, 0.55];&amp;#10;}&amp;#10;if ((stimulus_set === stim_set1)) {&amp;#10;    img_size = [0.4, 0.6];&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="#import important packages&amp;#10;import pandas&amp;#10;import csv&amp;#10;import random&amp;#10;&amp;#10;#set random seed for experiment&amp;#10;random_seed = int(expInfo['participant'])&amp;#10;random.seed(random_seed)&amp;#10;&amp;#10;#create list of random numbers to randomize run order for each participant&amp;#10;train_run_order = random.sample(range(1,100), 8)&amp;#10;print(train_run_order)&amp;#10;test_run_order = random.sample(range(1,100), 2)&amp;#10;print(test_run_order)&amp;#10;&amp;#10;#define stimulus sets and categories&amp;#10;stim_set1 = '/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/'&amp;#10;stim_set2 = '/Volumes/shares/Cabi/stimuli/cartoon_animals/Set2/'&amp;#10;category1 = {'categorya': 'Batmans', 'categoryb': 'Robins'}&amp;#10;category2 = {'categorya': 'Wallaces', 'categoryb': 'Gromets'}&amp;#10;if expInfo['session'] == '001':&amp;#10;    if (int(expInfo['participant'])%4) == 0:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category1&amp;#10;    if (int(expInfo['participant'])%4) == 1:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category1&amp;#10;    if (int(expInfo['participant'])%4) == 2:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category2&amp;#10;    if (int(expInfo['participant'])%4) == 3:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category2&amp;#10;&amp;#10;if expInfo['session'] == '002':&amp;#10;    if (int(expInfo['participant']) %4) == 0:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category2&amp;#10;    if (int(expInfo['participant'])%4) == 1:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category2&amp;#10;    if (int(expInfo['participant'])%4) == 2:&amp;#10;        stimulus_set = stim_set2&amp;#10;        session_cat = category1&amp;#10;    if (int(expInfo['participant'])%4) == 3:&amp;#10;        stimulus_set = stim_set1&amp;#10;        session_cat = category1&amp;#10;&amp;#10;# define the image size depending on where the image is coming from&amp;#10;if stimulus_set == stim_set2:&amp;#10;    img_size = [0.55, 0.55]&amp;#10;if stimulus_set == stim_set1:&amp;#10;    img_size = [0.4,0.6]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as pandas from 'pandas';&amp;#10;import * as csv from 'csv';&amp;#10;import * as random from 'random';&amp;#10;var category1, category2, img_size, random_seed, session_cat, stim_set1, stim_set2, stimulus_set, test_run_order, train_run_order;&amp;#10;random_seed = Number.parseInt(expInfo[&quot;participant&quot;]);&amp;#10;random.seed(random_seed);&amp;#10;train_run_order = random.sample(range(1, 100), 8);&amp;#10;console.log(train_run_order);&amp;#10;test_run_order = random.sample(range(1, 100), 2);&amp;#10;console.log(test_run_order);&amp;#10;stim_set1 = &quot;/Volumes/shares/Cabi/stimuli/cartoon_animals/Set1/&quot;;&amp;#10;stim_set2 = &quot;/Volumes/shares/Cabi/stimuli/cartoon_animals/Set2/&quot;;&amp;#10;category1 = {&quot;categorya&quot;: &quot;Batmans&quot;, &quot;categoryb&quot;: &quot;Robins&quot;};&amp;#10;category2 = {&quot;categorya&quot;: &quot;Wallaces&quot;, &quot;categoryb&quot;: &quot;Gromets&quot;};&amp;#10;if ((expInfo[&quot;session&quot;] === &quot;001&quot;)) {&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 0)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 1)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 2)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 3)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;}&amp;#10;if ((expInfo[&quot;session&quot;] === &quot;002&quot;)) {&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 0)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 1)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category2;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 2)) {&amp;#10;        stimulus_set = stim_set2;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;    if (((Number.parseInt(expInfo[&quot;participant&quot;]) % 4) === 3)) {&amp;#10;        stimulus_set = stim_set1;&amp;#10;        session_cat = category1;&amp;#10;    }&amp;#10;}&amp;#10;if ((stimulus_set === stim_set2)) {&amp;#10;    img_size = [0.55, 0.55];&amp;#10;}&amp;#10;if ((stimulus_set === stim_set1)) {&amp;#10;    img_size = [0.4, 0.6];&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -513,24 +491,18 @@
     <Routine name="demo">
       <FormComponent name="demo_form">
         <Param name="Data Format" updates="constant" val="rows" valType="str"/>
-        <Param name="Font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="Item Padding" updates="constant" val="0.05" valType="num"/>
         <Param name="Items" updates="constant" val=".csv" valType="file"/>
         <Param name="Randomize" updates="constant" val="False" valType="bool"/>
         <Param name="Style" updates="constant" val="dark" valType="str"/>
         <Param name="Text Height" updates="constant" val="0.03" valType="num"/>
-        <Param name="borderColor" updates="constant" val="" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="num"/>
-        <Param name="fillColor" updates="constant" val="" valType="color"/>
-        <Param name="itemColor" updates="constant" val="white" valType="color"/>
-        <Param name="markerColor" updates="constant" val="red" valType="color"/>
         <Param name="name" updates="None" val="demo_form" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="list"/>
-        <Param name="responseColor" updates="constant" val="white" valType="color"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="size" updates="constant" val="(1, 0.7)" valType="list"/>
         <Param name="startEstim" updates="None" val="" valType="num"/>
@@ -1130,10 +1102,10 @@
       <CodeComponent name="stim_train_recode">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="# run the create_train_set to create the training set, recoded to match the prototype&amp;#10;#output will be /data/_training_stim&amp;#10;sb.create_train_set('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/train_file.csv', randpro)&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv', filename + '_training_stim.csv')&amp;#10;# this refers to the training file that will be needed to create the generalization sets&amp;#10;training_stimuli = filename + '_training_stim.csv'&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="sb.create_train_set(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/train_file.csv&quot;, randpro);&amp;#10;os.rename(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv&quot;, (filename + &quot;_training_stim.csv&quot;));&amp;#10;training_stimuli = (filename + &quot;_training_stim.csv&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="sb.train_cond_file(training_stimuli, random_seed);&amp;#10;os.rename(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/cond_file.csv&quot;, (filename + &quot;_train_cond.csv&quot;));&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# Take the training set and input into the cond_file_build function. This functino will add all the necessary components to the file, like the category and correct key response.&amp;#10;sb.train_cond_file(training_stimuli, random_seed)&amp;#10;&amp;#10;#rename the file to train_conditions and use this file for the loop.&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/cond_file.csv', filename + '_train_cond.csv')" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# run the create_train_set to create the training set, recoded to match the prototype&amp;#10;#output will be /data/_training_stim&amp;#10;sb.create_train_set('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/train_file.csv', randpro)&amp;#10;&amp;#10;# this refers to the training file that will be needed to create the generalization sets&amp;#10;training_stimuli = '/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="sb.create_train_set(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/train_file.csv&quot;, randpro);&amp;#10;training_stimuli = &quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv&quot;;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="sb.train_cond_file(training_stimuli, random_seed);&amp;#10;os.rename(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/cond_file.csv&quot;, &quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/_train_cond.csv&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Take the training set and input into the cond_file_build function. This functino will add all the necessary components to the file, like the category and correct key response.&amp;#10;sb.train_cond_file(training_stimuli, random_seed)&amp;#10;&amp;#10;#rename the file to train_conditions and use this file for the loop.&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/cond_file.csv', '/Volumes/shares/Cabi/exp/joplin/joplin1/data/_train_cond.csv')" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1451,8 +1423,8 @@
       <CodeComponent name="stim_test_code">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="#define input variables&amp;#10;prototype_file = '/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv'&amp;#10;num_rows2add = 10&amp;#10;num_proto = 2&amp;#10;num_train_stim = 14&amp;#10;&amp;#10;#run gen_build function to produce generalization set. Will output two .csv files named genfile1 and genfile2&amp;#10;sb.gen_build(training_stimuli, prototype_file, randpro, num_rows2add, num_proto, num_train_stim, random_seed)&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile1.csv', filename + 'genfile1.csv')&amp;#10;os.rename('/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile2.csv', filename + 'genfile2.csv')&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="prototype_file = &quot;/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv&quot;;&amp;#10;num_rows2add = 10;&amp;#10;num_proto = 2;&amp;#10;num_train_stim = 14;&amp;#10;sb.gen_build(training_stimuli, prototype_file, randpro, num_rows2add, num_proto, num_train_stim, random_seed);&amp;#10;os.rename(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile1.csv&quot;, (filename + &quot;genfile1.csv&quot;));&amp;#10;os.rename(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile2.csv&quot;, (filename + &quot;genfile2.csv&quot;));&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="#define input variables&amp;#10;prototype_file = '/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv'&amp;#10;num_rows2add = 10&amp;#10;num_proto = 2&amp;#10;num_train_stim = 14&amp;#10;&amp;#10;#run gen_build function to produce generalization set. Will output two .csv files named genfile1 and genfile2&amp;#10;sb.gen_build(training_stimuli, prototype_file, randpro, num_rows2add, num_proto, num_train_stim, random_seed)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="prototype_file = &quot;/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv&quot;;&amp;#10;num_rows2add = 10;&amp;#10;num_proto = 2;&amp;#10;num_train_stim = 14;&amp;#10;sb.gen_build(training_stimuli, prototype_file, randpro, num_rows2add, num_proto, num_train_stim, random_seed);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -1590,8 +1562,8 @@
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="os.remove(filename + '_train_cond.csv')&amp;#10;os.remove(filename + 'genfile1.csv')&amp;#10;os.remove(filename + 'genfile2.csv')&amp;#10;os.remove(filename + '_training_stim.csv')" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="os.remove((filename + &quot;_train_cond.csv&quot;));&amp;#10;os.remove((filename + &quot;genfile1.csv&quot;));&amp;#10;os.remove((filename + &quot;genfile2.csv&quot;));&amp;#10;os.remove((filename + &quot;_training_stim.csv&quot;));&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="os.remove('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_train_cond.csv')&amp;#10;os.remove('/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile1.csv')&amp;#10;os.remove('/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile2.csv')&amp;#10;os.remove('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv')" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="os.remove(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/_train_cond.csv&quot;);&amp;#10;os.remove(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile1.csv&quot;);&amp;#10;os.remove(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile2.csv&quot;);&amp;#10;os.remove(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv&quot;);&amp;#10;" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -1712,24 +1684,18 @@
       </CodeComponent>
       <FormComponent name="form">
         <Param name="Data Format" updates="constant" val="rows" valType="str"/>
-        <Param name="Font" updates="constant" val="Open Sans" valType="str"/>
         <Param name="Item Padding" updates="constant" val="0.05" valType="num"/>
         <Param name="Items" updates="constant" val="demo_form.xlsx" valType="file"/>
         <Param name="Randomize" updates="constant" val="False" valType="bool"/>
         <Param name="Style" updates="constant" val="dark" valType="str"/>
         <Param name="Text Height" updates="constant" val="0.03" valType="num"/>
-        <Param name="borderColor" updates="constant" val="" valType="color"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="contrast" updates="constant" val="1" valType="num"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="num"/>
-        <Param name="fillColor" updates="constant" val="" valType="color"/>
-        <Param name="itemColor" updates="constant" val="white" valType="color"/>
-        <Param name="markerColor" updates="constant" val="red" valType="color"/>
         <Param name="name" updates="None" val="form" valType="code"/>
         <Param name="opacity" updates="constant" val="" valType="num"/>
         <Param name="pos" updates="constant" val="(0, 0.1)" valType="list"/>
-        <Param name="responseColor" updates="constant" val="white" valType="color"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="(1, 0.7)" valType="list"/>
         <Param name="startEstim" updates="None" val="" valType="num"/>
@@ -2384,7 +2350,7 @@
     <LoopInitiator loopType="TrialHandler" name="train_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$filename + train_set" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="$train_set" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -2416,7 +2382,7 @@
     <LoopInitiator loopType="TrialHandler" name="test_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$filename + gen_file" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="$gen_file" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -2440,3 +2406,4 @@
     <Routine name="exp_end"/>
   </Flow>
 </PsychoPy2experiment>
+sychoPy2experiment>

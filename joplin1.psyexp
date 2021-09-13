@@ -9,7 +9,7 @@
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
     <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
-    <Param name="Full-screen window" updates="None" val="False" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
@@ -25,7 +25,7 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[1500, 1125]" valType="list"/>
+    <Param name="Window size (pixels)" updates="None" val="[2240, 1260]" valType="list"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="white" valType="color"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
@@ -260,8 +260,8 @@
       <CodeComponent name="random_prototype">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="# import the script and use the randpro_select function to establish a random prototype for the rest of the experiment&amp;#10;import stim_build as sb&amp;#10;randpro = sb.randpro_select('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv', random_seed)&amp;#10;print(randpro)" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="import * as sb from 'stim_build';&amp;#10;var randpro;&amp;#10;randpro = sb.randpro_select(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv&quot;, random_seed);&amp;#10;console.log(randpro);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# import the script and use the randpro_select function to establish a random prototype for the rest of the experiment&amp;#10;import stim_build as sb&amp;#10;randpro = sb.randpro_select('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv', random_seed)&amp;#10;logging.log(level = logging.EXP, msg = randpro)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as sb from 'stim_build';&amp;#10;var randpro;&amp;#10;randpro = sb.randpro_select(&quot;/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv&quot;, random_seed);&amp;#10;logging.log({&quot;level&quot;: logging.EXP, &quot;msg&quot;: randpro});&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>

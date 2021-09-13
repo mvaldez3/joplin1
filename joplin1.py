@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.2.3),
-    on Thu Sep  2 16:19:11 2021
+    on Mon Sep 13 16:29:27 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -65,8 +65,8 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=[1500, 1125], fullscr=False, screen=0, 
-    winType='pyglet', allowGUI=True, allowStencil=False,
+    size=[2240, 1260], fullscr=True, screen=0, 
+    winType='pyglet', allowGUI=False, allowStencil=False,
     monitor='testMonitor', color='white', colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='height')
@@ -139,7 +139,7 @@ if stimulus_set == stim_set1:
 # import the script and use the randpro_select function to establish a random prototype for the rest of the experiment
 import stim_build as sb
 randpro = sb.randpro_select('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv', random_seed)
-print(randpro)
+logging.log(randpro)
 if expInfo['session'] == '001':
     welc_text = u'Welcome to the experiment! \n\n You will first complete a training phase where you will be presented images of cartoon animals and asked to determine whether they belong to the %s group or the %s group.\n\n You will not know which group the animals belong to at first. However, you will be given feedback on your answer, which you can then use to help you group the animals.\n\n Press SPACE to continue with the instructions.' % (session_cat['categorya'], session_cat['categoryb'])
 if expInfo['session'] == '002':

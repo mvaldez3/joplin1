@@ -68,11 +68,14 @@ def create_train_set(stim_file, random_prototype_selection):
 		write.writerows(t_file)
 
 #this function takes a csv file and formats it as a conditions file to feed into psychopy. Includes the category and correct key.
-def train_cond_file(training_stim, random_seed):
+def train_cond_file(training_stim, random_prototype_selection, random_seed):
 	random.seed(random_seed)
 	# Open the training stimuli set
 	train_stim = pd.read_csv(training_stim, header=None)
 	
+	#make an array of the possible stimuli
+	all1proto = np.array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+	all0proto = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 	#count the number of rows in the file
 	count = len(list(train_stim.index))
 
@@ -88,7 +91,10 @@ def train_cond_file(training_stim, random_seed):
 		pd2np = np.array((train_stim.iloc[i]).to_numpy())
 
 		# need to sum across all arrays to make a variable for categorization
-		sums = np.sum(pd2np)
+		if np.array_equal(random_prototype_selection, all1proto) is True:
+			sums = np.sum(pd2np)
+		if np.array_equal(random_prototype_selection, all0proto) is True:
+			sums = (10 - np.sum(pd2np))
 		sum_feat.append(sums)
 
 		# convert all elements in array from integers to strings to use in psychopy
@@ -279,6 +285,10 @@ def gen_build(train_file, prototype_file, random_prototype_selection, num_rows2a
 	#make genfile 1 csv
 	count = len(list(gf1.index))
 
+	#make an array of the possible stimuli
+	all1proto = np.array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+	all0proto = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+
 	num_rows = []
 	for i in range(count):
 		num_rows.append(i)
@@ -291,7 +301,10 @@ def gen_build(train_file, prototype_file, random_prototype_selection, num_rows2a
 		pd2np = np.array((gf1.iloc[i]).to_numpy())
 
 		# need to sum across all arrays to make a variable for categorization
-		sums = np.sum(pd2np)
+		if np.array_equal(random_prototype_selection, all1proto) is True:
+			sums = np.sum(pd2np)
+		if np.array_equal(random_prototype_selection, all0proto) is True:
+			sums = (10 - np.sum(pd2np))
 		sum_feat.append(sums)
 
 		# convert all elements in array from integers to strings to use in psychopy
@@ -353,7 +366,11 @@ def gen_build(train_file, prototype_file, random_prototype_selection, num_rows2a
 		pd2np = np.array((gf2.iloc[i]).to_numpy())
 
 		# need to sum across all arrays to make a variable for categorization
-		sums = np.sum(pd2np)
+		if np.array_equal(random_prototype_selection, all1proto) is True:
+			sums = np.sum(pd2np)
+		if np.array_equal(random_prototype_selection, all0proto) is True:
+			sums = (10 - np.sum(pd2np))
+		
 		sum_feat.append(sums)
 
 		# convert all elements in array from integers to strings to use in psychopy
@@ -399,3 +416,12 @@ def gen_build(train_file, prototype_file, random_prototype_selection, num_rows2a
 	
 	#convert to csv so psychopy can read
 	csv_file = id_df.to_csv('/Volumes/shares/Cabi/exp/joplin/joplin1/data/genfile2.csv', header=True, index=False)
+
+'''randpro = randpro_select('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv', random_seed = 1)
+print(randpro)
+create_train_set('/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/train_file.csv', randpro)
+train_cond_file('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv', randpro, random_seed = 1)
+gen_build('/Volumes/shares/Cabi/exp/joplin/joplin1/data/_training_stim.csv', '/Volumes/shares/Cabi/exp/joplin/joplin1/stim_files/prototype.csv', randpro, 10, 2, 14, random_seed = 1)'''
+
+
+

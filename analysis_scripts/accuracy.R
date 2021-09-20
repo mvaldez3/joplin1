@@ -6,7 +6,7 @@ library(readr)
 participant <- '101'
 
 #specify results file
-results_file <-'/Volumes/shares/Cabi/exp/joplin/joplin1/analysis_scripts/accuracy_results.csv'
+results_file <- '/Volumes/shares/Cabi/exp/joplin/joplin1/analysis_scripts/accuracy_results.csv'
 
 # specify file path to the data files 
 csv_path <- '/Volumes/shares/Cabi/exp/joplin/joplin1/data/'
@@ -280,7 +280,8 @@ write.table(results,
             append = T,
             sep = ',',
             col.names = F,
+            row.names = F,
             quote = F,
-            row.names = F, 
+            fileEncoding = 'UTF-8',
             eol = '\n')
 

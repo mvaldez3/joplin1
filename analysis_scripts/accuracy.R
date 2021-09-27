@@ -3,7 +3,7 @@ library(dplyr)
 library(readr)
 
 #list all of the participant numbers and session numbers
-participant <- '101'
+participant <- c('103')
 
 #specify results file
 results_file <- '/Volumes/shares/Cabi/exp/joplin/joplin1/analysis_scripts/accuracy_results.csv'
@@ -39,7 +39,7 @@ for (file in list_of_files){
     name <- paste0(session_name, var_name, val, sep = '')
     block <- (strtoi(val)) -1
     accuracy <- sum(na.omit(data$train_key.corr[which(data$train_runs.thisN == block)]))/
-      length(na.omit(data$train_key.corr[which(data$train_runs.thisN == block)]))
+      length(which(data$train_runs.thisN == block))
     assign(name, accuracy)
   }
   
@@ -49,7 +49,7 @@ for (file in list_of_files){
     name <- paste0(session_name, var_name, val, sep = '')
     block <- (strtoi(val)) -1
     accuracy <- sum(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 2 | data$train_runs.thisN == block & data$sums_feat == 8)]))/
-      length(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 2 | data$train_runs.thisN == block & data$sums_feat == 8)]))
+      length(which(data$train_runs.thisN == block & data$sums_feat == 2 | data$train_runs.thisN == block & data$sums_feat == 8))
     assign(name, accuracy)
   }
   
@@ -60,7 +60,7 @@ for (file in list_of_files){
     name <- paste0(session_name, var_name, val, sep = '')
     block <- (strtoi(val)) -1
     accuracy <- sum(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 4 | data$train_runs.thisN == block & data$sums_feat == 6)]))/
-      length(na.omit(data$train_key.corr[which(data$train_runs.thisN == block & data$sums_feat == 4 | data$train_runs.thisN == block & data$sums_feat == 6)]))
+      length(which(data$train_runs.thisN == block & data$sums_feat == 4 | data$train_runs.thisN == block & data$sums_feat == 6))
     assign(name, accuracy)
   }
   
@@ -68,7 +68,7 @@ for (file in list_of_files){
   var_name = '_overall_gen'
   name <- name <- paste0(session_name, var_name, sep = '')
   accuracy <- sum(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 | data$test_runs.thisN == 1)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 | data$test_runs.thisN == 1)]))
+    length(which(data$test_runs.thisN == 0 | data$test_runs.thisN == 1))
   assign(name, accuracy)
   
   
@@ -80,10 +80,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 8 & data$train_item == 1 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 2 & data$train_item == 1 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 8 & data$train_item == 1)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$train_item == 1 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$train_item == 1 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 8 & data$train_item == 1 | 
                                               data$test_runs.thisN == 1 & data$sums_feat == 2 & data$train_item == 1 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 8 & data$train_item == 1)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 8 & data$train_item == 1))
   assign(name, accuracy)
   
   
@@ -94,10 +94,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 6 & data$train_item == 1 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 4 & data$train_item == 1 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 6 & data$train_item == 1)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$train_item == 1 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$train_item == 1 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 6 & data$train_item == 1| 
                                               data$test_runs.thisN == 1 & data$sums_feat == 4 & data$train_item == 1 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 6 & data$train_item == 1)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 6 & data$train_item == 1))
   assign(name, accuracy)
   
   
@@ -108,10 +108,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 10 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 0 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 10 & data$train_item == 0)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 0 & data$train_item == 0 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 0 & data$train_item == 0 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 10 & data$train_item == 0 | 
                                               data$test_runs.thisN == 1 & data$sums_feat == 0 & data$train_item == 0 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 10 & data$train_item == 0)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 10 & data$train_item == 0))
   assign(name, accuracy)
   
   ### D1 New Generalization Accuracy - returned as 'session_d1_new_gen'
@@ -121,10 +121,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 9 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 1 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 9 & data$train_item == 0)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 1 & data$train_item == 0 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 1 & data$train_item == 0 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 9 & data$train_item == 0 | 
                                               data$test_runs.thisN == 1 & data$sums_feat == 1 & data$train_item == 0 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 9 & data$train_item == 0)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 9 & data$train_item == 0))
   assign(name, accuracy)
   
   
@@ -135,10 +135,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 8 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 2 & data$train_item == 0| 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 8 & data$train_item == 0)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$train_item == 0 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 2 & data$train_item == 0 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 8 & data$train_item == 0 | 
                                               data$test_runs.thisN == 1 & data$sums_feat == 2 & data$train_item == 0 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 8 & data$train_item == 0)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 8 & data$train_item == 0))
   assign(name, accuracy)
   
   
@@ -149,10 +149,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 7 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 3 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 7 & data$train_item == 0)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 3 & data$train_item == 0 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 3 & data$train_item == 0 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 7 & data$train_item == 0 | 
                                               data$test_runs.thisN == 1 & data$sums_feat == 3 & data$train_item == 0 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 7 & data$train_item == 0)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 7 & data$train_item == 0))
   assign(name, accuracy)
   
   
@@ -163,10 +163,10 @@ for (file in list_of_files){
                                                      data$test_runs.thisN == 0 & data$sums_feat == 6 & data$train_item == 0 | 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 4 & data$train_item == 0| 
                                                      data$test_runs.thisN == 1 & data$sums_feat == 6 & data$train_item == 0)]))/
-    length(na.omit(data$test_key.corr[which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$train_item == 0 | 
+    length(which(data$test_runs.thisN == 0 & data$sums_feat == 4 & data$train_item == 0 | 
                                               data$test_runs.thisN == 0 & data$sums_feat == 6 & data$train_item == 0 | 
                                               data$test_runs.thisN == 1 & data$sums_feat == 4 & data$train_item == 0 | 
-                                              data$test_runs.thisN == 1 & data$sums_feat == 6 & data$train_item == 0)]))
+                                              data$test_runs.thisN == 1 & data$sums_feat == 6 & data$train_item == 0))
   assign(name, accuracy)
 }
 
@@ -282,6 +282,5 @@ write.table(results,
             col.names = F,
             row.names = F,
             quote = F,
-            fileEncoding = 'UTF-8',
             eol = '\n')
 

@@ -1,0 +1,167 @@
+0.5782 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+9.6829 	INFO 	Loaded monitor calibration from ['2021_07_06 09:38']
+10.2632 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1, 1, 1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7faa87cc2ba8>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7faa87aace80>, multiSample=False, name='window1', numSamples=2, pos=[560.0, 315.0], screen=0, size=array([4480, 2520]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.2634 	EXP 	window1: mouseVisible = True
+10.2635 	EXP 	window1: recordFrameIntervals = False
+10.4295 	EXP 	window1: recordFrameIntervals = True
+10.6132 	DEBUG 	Screen (0) actual frame rate measured at 59.86
+10.6132 	EXP 	window1: recordFrameIntervals = False
+10.9251 	INFO 	keyboard.Keyboard is using ptb backend.
+10.9545 	EXP 	[0 0 0 0 0 0 0 0 0 0]
+11.0089 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='welcome_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.0466 	INFO 	keyboard.Keyboard is using ptb backend.
+11.0585 	EXP 	Created train_inst1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='train_inst1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.0928 	INFO 	keyboard.Keyboard is using ptb backend.
+11.1015 	EXP 	Created train_inst2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='train_inst2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.1359 	INFO 	keyboard.Keyboard is using ptb backend.
+11.1988 	EXP 	Created train_begin_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='train_begin_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Press SPACE to start the training phase. ', units='height', win=Window(...), wrapWidth=1)
+11.2394 	INFO 	keyboard.Keyboard is using ptb backend.
+11.2420 	EXP 	Created train_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=False, mask=None, maskParams=None, name='train_image', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.4, 0.6]), texRes=128.0, units='height', win=Window(...))
+11.2460 	EXP 	Created catA_train = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='catA_train', opacity=1, ori=0.0, pos=array([-0.4 , -0.35]), rgb=UNKNOWN, text='Wallaces', units='height', win=Window(...), wrapWidth=1)
+11.2498 	EXP 	Created catB_train = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='catB_train', opacity=1, ori=0.0, pos=array([ 0.4 , -0.35]), rgb=UNKNOWN, text='Gromets', units='height', win=Window(...), wrapWidth=1)
+11.2844 	INFO 	keyboard.Keyboard is using ptb backend.
+11.2853 	EXP 	Created feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedback_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.2890 	EXP 	Created fix1000 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fix1000', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.15]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+11.2938 	EXP 	Created run_break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='run_break_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.3283 	INFO 	keyboard.Keyboard is using ptb backend.
+11.3344 	EXP 	Created train_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='train_end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.3690 	INFO 	keyboard.Keyboard is using ptb backend.
+11.3779 	EXP 	Created test_inst1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='test_inst1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.4122 	INFO 	keyboard.Keyboard is using ptb backend.
+11.4205 	EXP 	Created test_inst2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='test_inst2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.4549 	INFO 	keyboard.Keyboard is using ptb backend.
+12.5283 	EXP 	Created test_begin_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='test_begin_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Press SPACE to start the testing phase. ', units='height', win=Window(...), wrapWidth=1)
+12.5735 	INFO 	keyboard.Keyboard is using ptb backend.
+12.5758 	EXP 	Created test_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=False, mask=None, maskParams=None, name='test_image', opacity=1, ori=0.0, pos=array([0. , 0.1]), size=array([0.4, 0.6]), texRes=128.0, units='height', win=Window(...))
+12.5779 	EXP 	Created catA_test = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='catA_test', opacity=1, ori=0.0, pos=array([-0.4 , -0.35]), rgb=UNKNOWN, text='Wallaces', units='height', win=Window(...), wrapWidth=1)
+12.5797 	EXP 	Created catB_test = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='catB_test', opacity=1, ori=0.0, pos=array([ 0.4 , -0.35]), rgb=UNKNOWN, text='Gromets', units='height', win=Window(...), wrapWidth=1)
+12.6147 	INFO 	keyboard.Keyboard is using ptb backend.
+12.6166 	EXP 	Created fix1000 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='fix1000', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.15, 0.15]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+12.6213 	EXP 	Created run_break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='run_break_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.6558 	INFO 	keyboard.Keyboard is using ptb backend.
+12.6620 	EXP 	Created test_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='test_end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.6964 	INFO 	keyboard.Keyboard is using ptb backend.
+12.7112 	EXP 	Created demo_instr1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo_instr1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.7456 	INFO 	keyboard.Keyboard is using ptb backend.
+12.7457 	INFO 	Importing items...
+12.7631 	DEBUG 	Read excel file with openpyxl: demo_form.xlsx
+12.7642 	EXP 	Imported demo_form.xlsx as conditions, 7 conditions, 6 params
+12.7642 	WARNING 	Form form included field no longer used questionText. Replacing with new name 'itemText'
+12.7642 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7642 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7642 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7642 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7643 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7643 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7643 	WARNING 	questionWidth is a deprecated heading for Forms. Use itemWidth instead
+12.7643 	INFO 	Using default values for the following headers: ['index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor', 'index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor', 'index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor', 'index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor', 'index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor', 'index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor', 'index', 'itemColor', 'ticks', 'tickLabels', 'font', 'responseWidth', 'responseColor', 'markerColor']
+12.7654 	INFO 	Setting layout of Form: form.
+12.7654 	EXP 	Question text: Are you Hispanic/Latino?
+12.7759 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7768 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7779 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7781 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7784 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7798 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7809 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7820 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7834 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7840 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7849 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7863 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7872 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7882 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7891 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7901 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7912 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7921 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7931 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.7932 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.7965 	DEBUG 	Upload of Texture Font fontname complete
+12.7968 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8043 	INFO 	Mouse: using default window
+12.8044 	EXP 	window1: mouseVisible = True
+12.8170 	EXP 	Question text: Are you an American Indian or Alaska Native?
+12.8208 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8214 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8227 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8233 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8246 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8261 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8271 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8272 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.8293 	DEBUG 	Upload of Texture Font fontname complete
+12.8295 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8300 	INFO 	Mouse: using default window
+12.8301 	EXP 	window1: mouseVisible = True
+12.8364 	EXP 	Question text: Are you Asian?
+12.8394 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8398 	INFO 	Mouse: using default window
+12.8399 	EXP 	window1: mouseVisible = True
+12.8461 	EXP 	Question text: Are you Black or African American?
+12.8495 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8507 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8509 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.8531 	DEBUG 	Upload of Texture Font fontname complete
+12.8533 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8538 	INFO 	Mouse: using default window
+12.8539 	EXP 	window1: mouseVisible = True
+12.8600 	EXP 	Question text: Are you a Native Hawaiian or other Pacific Islander?
+12.8638 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8653 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8666 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8668 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.8689 	DEBUG 	Upload of Texture Font fontname complete
+12.8691 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8696 	INFO 	Mouse: using default window
+12.8697 	EXP 	window1: mouseVisible = True
+12.8757 	EXP 	Question text: Are you White?
+12.8800 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8801 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.8822 	DEBUG 	Upload of Texture Font fontname complete
+12.8824 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8829 	INFO 	Mouse: using default window
+12.8830 	EXP 	window1: mouseVisible = True
+12.8892 	EXP 	Question text: Do you have any history of neurological issues such as stroke, head injury or a neurodegenerative disorder?
+12.8928 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8946 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8953 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8964 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.8969 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.8989 	DEBUG 	Upload of Texture Font fontname complete
+12.8992 	INFO 	Adding response to Form type: radio, layout: horiz, options: ['yes', 'no', 'prefer not to answer']
+12.8997 	INFO 	Mouse: using default window
+12.8997 	EXP 	window1: mouseVisible = True
+12.9063 	INFO 	Mouse: using default window
+12.9064 	EXP 	window1: mouseVisible = True
+12.9101 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Rect', opacity=0, ori=0.0, pos=array([0., 0.]), size=array([0., 0.]), units='height', vertices=ndarray(...), win=Window(...))
+12.9274 	INFO 	Layout set for Form: form.
+12.9274 	EXP 	Created form = <psychopy.visual.form.Form object at 0x7faa85f38128>
+12.9621 	INFO 	keyboard.Keyboard is using ptb backend.
+12.9784 	EXP 	Created form_inst = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='form_inst', opacity=1, ori=0.0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='Press ENTER/RETURN to submit your response', units='height', win=Window(...), wrapWidth=1)
+12.9887 	EXP 	Created demo_inst2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo_inst2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.0235 	INFO 	keyboard.Keyboard is using ptb backend.
+13.0267 	EXP 	Created demo2_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo2_instr_text', opacity=1, ori=0.0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='What is your gender?', units='height', win=Window(...), wrapWidth=1)
+13.0295 	EXP 	Created demo2_submit_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo2_submit_text', opacity=1, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Press ENTER/RETURN to submit response.', units='height', win=Window(...), wrapWidth=1)
+13.0304 	EXP 	Created gender = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='gender', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.0326 	EXP 	Created demo3_instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo3_instr', opacity=1, ori=0.0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='What is your age?', units='height', win=Window(...), wrapWidth=1)
+13.0352 	EXP 	Created demo3_submit_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo3_submit_text', opacity=1, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Press ENTER/RETURN to submit response.', units='height', win=Window(...), wrapWidth=1)
+13.0361 	EXP 	Created age = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='age', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.0409 	EXP 	Created demo4_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo4_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.0753 	INFO 	keyboard.Keyboard is using ptb backend.
+13.0811 	EXP 	Created dem05_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dem05_text', opacity=1, ori=0.0, pos=array([0. , 0.2]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.0838 	EXP 	Created demo5_submit_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo5_submit_text', opacity=1, ori=0.0, pos=array([ 0. , -0.2]), rgb=UNKNOWN, text='Press ENTER/RETURN to submit response.', units='height', win=Window(...), wrapWidth=1)
+13.0847 	EXP 	Created language = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='language', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.0923 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.1125 	EXP 	unnamed Form: autoLog = True
+13.1125 	EXP 	form: name = 'form'
+13.1125 	EXP 	form: size = (1, 0.7)
+13.1125 	EXP 	form: size = array([1. , 0.7])
+13.1125 	EXP 	form: units = 'height'
+13.1125 	EXP 	form: depth = 0
+13.1125 	EXP 	welcome_text: autoDraw = True
+13.9521 	DATA 	Keypress: escape
+14.0887 	EXP 	window1: mouseVisible = True
+14.0889 	DEBUG 	Saving data for joplin1 ExperimentHandler
+14.1171 	INFO 	saved data to /Volumes/shares/Cabi/exp/joplin/joplin1/data/9292922_001_joplin1.psydat
+14.1463 	INFO 	saved data to '/Volumes/shares/Cabi/exp/joplin/joplin1/data/9292922_001_joplin1.csv'

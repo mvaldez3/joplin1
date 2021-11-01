@@ -60,8 +60,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="train_stim = ((stimulus_set + stim_id.replace(&quot; &quot;, &quot;&quot;).toString()) + &quot;.jpg&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# define the image path for the image component&amp;#10;train_stim = (stimulus_set + str(stim_id.replace(' ', '')) + '.jpg')&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="train_stim = ((stimulus_set + stim_id.replace(&quot; &quot;, &quot;&quot;).toString()) + &quot;.jpg&quot;);&amp;#10;psychoJS.experiment.addData(&quot;stim_id2&quot;, stim_id.replace(&quot; &quot;, &quot;&quot;).toString());&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# define the image path for the image component&amp;#10;train_stim = (stimulus_set + str(stim_id.replace(' ', '')) + '.jpg')&amp;#10;thisExp.addData('stim_id2', str(stim_id.replace(' ', '')))" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
